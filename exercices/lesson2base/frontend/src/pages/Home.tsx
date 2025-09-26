@@ -4,15 +4,17 @@ import ExpenseAdd from '../components/ExpenseAdd';
 import ExpenseSorter from '../components/ExpenseSorter';
 import type { Expense } from '../types/Expense';
 
+const host = import.meta.env.VITE_API_URL || 'http://unknown-api-url.com';
+
 export default function Home() {
   const [sortingAlgo, setSortingAlgo] = useState<(a: Expense, b: Expense) => number>(() => () => 0);
   const [expenses, setExpenses] = useState<Expense[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const sendApiRequestandHandleError = async (method: string = 'GET', path: string, body?: any) => {
+  const sendApiRequestandHandleError = async (method: string = 'GET', path: string, body?: unknown) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/${path}`, {
+      const response = await fetch(`host`, {
         method: method,
         headers: body ? { 'Content-Type': 'application/json' } : {},
         body: body ? JSON.stringify(body) : null,
