@@ -1,0 +1,23 @@
+[
+  {
+    "id": "4",
+    "date": "2025-09-19",
+    "description": "Lunch",
+    "payer": "Bob",
+    "amount": 12.5
+  },
+  {
+    "id": "4",
+    "date": "2025-09-19",
+    "description": "Lunch",
+    "payer": "Bob",
+    "amount": 12.5
+  },
+  {
+    "id": "52",
+    "date": "2025-09-19",
+    "description": "Lunch",
+    "payer": "Bob",
+    "amount": 12.5
+  }
+]

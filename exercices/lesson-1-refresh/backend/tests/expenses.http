@@ -1,0 +1,21 @@
+# Get all expenses
+GET http://localhost:3000/expenses
+
+###
+
+# Add a new expense
+POST http://localhost:3000/expenses
+Content-Type: application/json
+
+{
+  "id": "52",
+  "date": "2025-09-19",
+  "description": "Lunch",
+  "payer": "Bob",
+  "amount": 12.5
+}
+
+###
+
+# Get expenses again to verify
+GET http://localhost:3000/expenses
